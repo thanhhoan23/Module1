@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action_page.php">
+        Account:
+        <input name="account" type="text">
+    </form>
+
+    <form action="/action_page.php">
+        Sign in:
+        <input name="sign in" type="text">
+    </form>
+
+    <!-- input password: dung de nhap mat khau -->
+
+    <form action="http://">
+        Password:
+        <input name="password" type="password">
+    </form>
+   
+    <!-- input checkbox: dung de chon nhieu hang muc tu danh sach -->
+    <form action="http://">
+        <input type="checkbox" name="hobby" value="travel" > du lich <br>
+        <input type="checkbox" name="hobby" value="sport"> the thao <br>
+        <input type="checkbox" name="hobby" value="cooking"> nau an
+
+    </form>
+
+    <!-- input radio: dung de chon mot hang muc tu danh sach -->
+    <form action="http://">
+        <input type="radio" name="favourite" value="destination"> dia diem <br>
+        <input type="radio" name="favourite" value="check-in"> chup anh <br>
+        <input type="radio" name="favourite" value="check-out"> hieu chua
+    </form>
+    <!-- input reset: dung de xoa gia tritrong mot form. dua cac truong ve dang mac dinh -->
+    <!-- input submit: dung de hien thi mot nut, cos chuc nang day du lieu tu form len server khi bam vao -->
+
+    <form action="http">
+        name:
+        <input type="text" name="name" >
+        password:
+        <input type="text" name="password">
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+
+    <!-- input hidden: chua cac gia tri cua form nhung khong hien thi tren giao diejn cua nguoi dung, duw lieu cung duoc day len tren server -->
+
+    <form method="POST">
+        <input type="hidden" name="secret" value="acbds"> 
+        accout: <input type="text" name="account" value="admin"><br>
+        so thich: <br>
+        <input type="text" name="hobby" value="sport"> the thao <br>
+        <input type="text" name="hobby" value="travel"> du lich <br>
+        <input type="text" name="hobby" value="destination"> diem den
+    </form>
+
+    <!-- thẻ button: bên trong thẻ button có thể đưa thêm các nội dung khác vào ví dụ như chuỗi or hình ảnh -->
+    <!-- đây là sự khác nhau giữa thẻ button so với input button(chỉ chứa text) -->
+
+    <form method="POST">
+        <button type="button">
+            <img src="https://i.pinimg.com/474x/75/31/5d/75315db511a058432745fc37d82a7c44.jpg" alt="meme" width="200px">
+        </button>
+    </form>
+
+    textarea là sử dụng để hiện thị trường nhập chuỗi dài (nhiều dòng)
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <form method="POST">
+        pass:
+        <textarea name="pass" id="" cols="30" rows="10"> you can use the pastword to sign in</textarea>
+
+    </form>
+</body>
+
+
+</html>
