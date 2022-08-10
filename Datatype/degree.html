@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doi do c</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td> Celsius
+                <input type="number" id="C">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="Transfer"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="showTransfer()">Click2</button>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+<script>
+    function showTransfer() {
+        let C = parseInt(document.getElementById('C').value);
+        let transfer = 9*C/5 + 32;
+        document.getElementById('Transfer').innerHTML = transfer; 
+    
+
+
+        
+    }
+</script>
+
+</html>

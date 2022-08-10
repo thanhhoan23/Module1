@@ -5,7 +5,7 @@ function showSum() {
     let biological = parseInt(document.getElementById('biological').value);
     let sum = physical + chemistry + biological;
     document.getElementById("sum").innerHTML = sum;
-console.log(sum);
+    console.log(sum);
 }
-// }
+
 
