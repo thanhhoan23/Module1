@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>may tinh</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2">
+                <input style="width:200px;height:30px" type="number" id="numa">
+            </td>
+            <td colspan="2">
+                <input style="width:200px;height:30px" type="number" id="numb">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="showResult()">Additional(+)</button>
+            </td>
+            <td>
+                <button onclick="showResult1()">Subtraction(-)</button>
+            </td>
+            <td>
+                <button onclick="showResult2()">Multiplication(x)</button>
+            </td>
+            <td>
+                <button onclick="showResult3()">Division(/)</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Result:</h3>
+            </td>
+           
+            <td>
+                <div id="result"> </div>
+            </td>
+        </tr>
+        
+    </table>
+</body>
+<script>
+    function showResult(){
+       let numberA= parseInt(document.getElementById('numa').value);
+       let numberB= parseInt(document.getElementById('numb').value);
+       let result1 = numberA + numberB;
+       document.getElementById('result').innerHTML = result1;
+    }
+    function showResult1(){
+        let numberA= parseInt (document.getElementById('numa').value);
+        let numberB= parseInt (document.getElementById('numb').value);
+        let result1= numberA - numberB;
+        document.getElementById('result').innerHTML = result1;
+    }
+    function showResult2(){
+        let numberA= parseInt (document.getElementById('numa').value);
+        let numberB= parseInt (document.getElementById('numb').value);
+        let result1= numberA * numberB;
+        document.getElementById('result').innerHTML = result1;
+    }
+    function showResult3(){
+        let numberA= parseInt (document.getElementById('numa').value);
+        let numberB= parseInt (document.getElementById('numb').value);
+        let result1= numberA / numberB;
+        document.getElementById('result').innerHTML = result1;
+    }
+
+</script>
+</html>
