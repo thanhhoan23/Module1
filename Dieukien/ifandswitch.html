@@ -10,7 +10,7 @@
     
 </body>
 <script>
-    // cách 1: sử dụng câu điều kiện if - else:
+    // Bài tập1: sử dụng câu điều kiện if - else:
 
     // let brower = prompt('Enter brower name');
     // if (brower == "Edge") {
@@ -20,20 +20,32 @@
     // } else {
     //     alert ('we hope that this page looks ok!')
     // }
-    //  cách 2: sử dụng switch - case:
+    //  bài tập2: sử dụng switch - case:
 
-    let brower = prompt('Enter brower name');
-    switch (brower) {
-        case 'Edge':
-            alert ("you have got the Edge");
-            break;
-        case 'chrome':
-        case 'safari': 
-        case 'firefox': 
-        alert ("we will support these browers too");
-        break;
-        default:
-        alert("we hope that this page looks ok!");
+    // let brower = prompt('Enter brower name');
+    // switch (brower) {
+    //     case 'Edge':
+    //         alert ("you have got the Edge");
+    //         break;
+    //     case 'chrome':
+    //     case 'safari': 
+    //     case 'firefox': 
+    //     alert ("we will support these browers too");
+    //     break;
+    //     default:
+    //     alert("we hope that this page looks ok!");
+    // }
+
+    // bai tap3: kiểm tra giá trị của số
+
+    let number = Number(prompt("enter the number"));
+     
+    if (number > 0 ){
+        alert (1);
+    } else if (number < 0) {
+        alert (-1)
+    } else {
+        alert(0)
     }
 
 </script>
