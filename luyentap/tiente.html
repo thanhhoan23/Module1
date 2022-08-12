@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuyen doi tien te</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>Form Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+            <input type="number" id="num">
+            </td>
+            <td>
+                <select name="" id="form" style="width:100px">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td>
+                <select name="" id="to" style="width:100px">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="convert()">Convert</button>
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function convert (){ 
+        let amount = document.getElementById('num').value;
+        let form = document.getElementById('form').value;
+        let to = document.getElementById('to').value;
+        if (form == 'USD' && to == 'VND') {
+            result = 'result:' + (amount*23000) + 'VND';
+        } else if( form== 'VND' && to == 'USD'){
+            result = 'result:' + (amount/23000) + 'USD';
+        } else if (form== 'USD'){
+            result = 'result:' + amount + 'USD' ;
+        } else {
+            result = 'result:' + amount + 'VND';
+        }
+        document.getElementById('result').innerHTML= result;
+    }
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="number"; id="num">
+            </td>
+            <td>
+                <select name="" id="form">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td>
+                <select name="" id="to">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="showResult()">Convert</button>
+            </td>
+            <td>
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function showResult(){
+        let mount = document.getElementById('num').value;
+        let form = document.getElementById('form').value;
+        let to = document.getElementById('to').value;
+        if (form=='USD' && to == 'VND'){
+            result = 'result:' + (mount * 23000) + 'VND';
+        } else if (form == 'VND' && to=='USD'){
+            result= 'result:' + (mount/23000) + 'USD';
+        }else if(form=='USD'){
+            result = 'result' + (mount) + 'USD';
+        } else {
+            result = 'result' + (muont) + 'VND';
+        }
+        document.getElementById('result').innerHTML = result;
+    }
+  
+</script>
+</html>
