@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vidu nhap ten nguoi dung</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th> Username</th>
+            <td>
+                <input type="text" id="name">
+            </td>
+        </tr>
+        <tr>
+            <th> Password</th>
+            <td> 
+                <input type="text" id="pw">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="showPass()">Enter</button>
+            </td>
+            <td>
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+<script>
+    function showPass () {
+        let name = document.getElementById('name').value;
+        let pass = document.getElementById('pw').value
+
+        if (name == 'Admin' && pass == 'TheMaster' ) {
+            alert("Welcome");
+        } else if (name == 'null' && pass == 'null') {
+            alert('Cancel');
+        } else {
+            alert ('i do not know you');
+        }
+    }
+</script>
+</html>
