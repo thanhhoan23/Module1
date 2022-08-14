@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td> weight:
+                <input type="number" id="weight">
+            </td>
+            
+        </tr>
+        <tr>
+            <td> height:
+                <input type="number" id="height">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="showResult()">Reslult</button>
+            </td>
+            <td>
+                <p id="result"></p>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function showResult() {
+        var height = document.getElementById('weight').value;
+        var weight = document.getElementById('height').value;
+        var bim = weight / height*height;
+    if (bim < 18.5) {
+        document.getElementById('result')= 'Underweight';
+    }else if (18.5<=bim<25.0) {
+        document.getElementById('result')= 'Nomal';
+    } else if (20.5 <=bim<30.0){    
+        document.getElementById('result')= 'Overweight';
+    }else {
+        document.getElementById('result')= 'Obese';
+    }
+    }
+</script>
+</html>
