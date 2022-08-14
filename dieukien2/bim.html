@@ -31,18 +31,34 @@
 </body>
 <script>
     function showResult() {
-        var height = document.getElementById('weight').value;
-        var weight = document.getElementById('height').value;
+        var height = Number(document.getElementById('weight').value);
+        var weight = Number(document.getElementById('height').value);
         var bim = weight / height*height;
     if (bim < 18.5) {
-        document.getElementById('result')= 'Underweight';
+        document.getElementById('result').innerHTML= 'Underweight';
     }else if (18.5<=bim<25.0) {
-        document.getElementById('result')= 'Nomal';
+        document.getElementById('result').innerHTML= 'Nomal';
     } else if (20.5 <=bim<30.0){    
-        document.getElementById('result')= 'Overweight';
+        document.getElementById('result').innerHTML= 'Overweight';
     }else {
-        document.getElementById('result')= 'Obese';
+        document.getElementById('result').innerHTML= 'Obese';
     }
     }
+
+    // function showResult() {
+    //     var height = document.getElementById('height').value;
+    //     var weight = document.getElementById('weight').value;
+    //     var bim = weight/height*height;
+    //     if (bim < 18.5){
+    //         alert('Underweight');
+    //     } else if (18.5<=bim<25.0) {
+    //         alert('Nomal');
+    //     } else if(20.5 <=bim<30.0) {
+    //         alert('overweight');
+    //     }else {
+    //         alert(obese)
+    //     }
+        
+    // }
 </script>
 </html>
