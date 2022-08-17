@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input id="check" onchange="change1()" type="checkbox"> GOOD
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="check2" onchange="change2()" type="checkbox"> CHEAP
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="check3" onchange="change3()" type="checkbox"> FAST
+            </td>
+        </tr>
+    </table>
+    <script>
+        let check1= document.getElementById('check');
+        let check2= document.getElementById('check2');
+        let check3= document.getElementById('check3');
+
+        function change3() {
+            if(check3.checked){
+                if (check1.checked && check2.checked){
+                check1.checked = false;
+            } 
+            }          
+        }
+        function change2() {
+            if(check2.checked){
+                if (check1.checked && check3.checked){
+                check3.checked = false;
+            }  
+            }          
+        }
+        function change1() {
+            if(check1.checked){
+                if (check2.checked && check3.checked){
+                check2.checked = false;
+            }    
+            }        
+        }
+       
+    </script>
+
+</body>
+
+</html>
