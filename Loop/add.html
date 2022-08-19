@@ -8,16 +8,16 @@
 </head>
 <body>
     <script>
-        // let number = Number (prompt ('enter the number'));
-        do {
-            number = Number (prompt('enter the number'));
-            alert(number);
-        } while (number < 0 || number >10);
+        let number = Number (prompt ('enter the number'));
+        // do {
+        //     number = Number (prompt('enter the number'));
+        //     alert(number);
+        // } while (isNaN (number) || number < 0 || number >10);
        
-        // for (; number <0 || number >10; ) {
-        //     number = Number (prompt ('enter the number'));
-        //     alert (number);
-        // }
+        for (; isNaN(number) || number <0 || number >10; ) {
+            number = Number (prompt ('enter the number'));
+            alert (number);
+        }
 
         // while (number < 0 || number > 10){
         //     number = Number (prompt ('enter the number'));

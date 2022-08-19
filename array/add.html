@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     let size;
+    //     do { size = Number(prompt('nhap so phan tu'));
+    // } while (isNaN(size));
+    // let listname = new Array(size);
+    // for (let i =0; i<listname.length; i++){
+    //     listname[i] = Math.floor (Math.random() * (40-10+ 1) +10);
+    // }
+    // document.write(listname);
+
+
+    // bai 1: 
+//     let n;
+//     let i;
+//     do { n = Number(prompt("Enter the number"))
+// } while (isNaN(n));
+//     let m = new Array(n);
+//     for (let i=0; i<m.length; i++) {
+//         m[i] = Math.floor(Math.random()*(30-20+1)+20);
+//     }
+//     if (n == m[i]) {
+//             document.write("n xuat hien trong mang");
+//         } else {document.write("n khong xuat hien trong mang")
+    
+//     }
+// bai 
+ let number = [];
+ let row = 4;
+ let cell = 5;
+ 
+ let min= 10, max=50;
+ for(let r = 0, r < row ; r++){
+    number[r] = [];
+    for(let c =0; c<cell; c++){
+        number [r][c] = Math.floor(Math.random()*(50-10+1)+10);
+    }
+}
+    for(let r=0; r<row; r++){
+        document.write(`${number[r]}`)
+    }
+// mang job cong viec: 
+// hien thi mang job o tren man hinh
+ 
+    
+    
+
+        
+
+    
+
+    </script>
+    
+</body>
+</html>

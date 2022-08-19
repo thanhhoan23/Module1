@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sample Screen</h1>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="txtValue">
+            </td>
+            <td>
+                <input type="button" value="Add" id="btnAdd" onclick="add_element_array()">
+            </td>
+            <td>
+                <input type="button" value="Display" id="btnDisplay" onclick="display_array()">
+            </td>
+            <div id="result"></div>
+        </tr>
+    </table>
+    
+
+    <script>
+        let x = 0; 
+        let e = 0
+        // x la chi so truy cap toi phan tu trong mang
+        let array = new Array ();
+        // tao mang array de luu gia tri nhap vao
+        function add_element_array(){
+            array [x] = document.getElementById("txtValue").value;
+
+            // alert ("elemnt:" + array[x] + "added at index" + x);
+            alert (`Element: ${array[x]} added at index ${x}`);
+            x++;
+            document.getElementById("txtValue").value = " ";
+        }
+        function display_array() {
+            for (var i=0; i< array.length; i++){
+               
+                e += `element:  ${i} = ${array[i]} <br>`;
+            }
+            document.getElementById("result").innerHTML = e;
+        }
+    </script>
+</body>
+</html>
