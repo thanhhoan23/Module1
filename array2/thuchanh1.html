@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Them phan tu va duyet mang</title>
+</head>
+<body>
+    <h1>Sample Screen</h1>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="textValue">
+                <button onclick="add_element()" value="Add" id="bAdd">Add</button>
+                <button onclick="display_element()" value="Display" id="bDisplay">Display</button>
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        let x=0;
+        let array = new Array ();
+        function add_element() {
+            array [x] = document.getElementById("textValue").value;
+            alert (`Element: ${array[x]} add at index ${x}`);
+            x++;
+            document.getElementById('textValue').value = " ";
+        }
+        function display_element() {
+            let e = "<hr/>";
+            for (i = 0; i < array.length; i++) {
+                e += `Element: ${i} =  ${array[i]} <br>`;
+            }
+            document.getElementById('result').innerHTML = e;
+
+        }
+    </script>
+</body>
+</html>

@@ -8,24 +8,43 @@
 </head>
 <body>
     <script>
-        let number = 20;
-        let count = 0;
-        // count là đếm số có trong dãy số 
-        let countuoc = 0;
-        // vì số nguyên tố nên có 2 ước để xuống xét điều kiện 
-        for ( let i = 2; count< number; i++){
-            for (let j=1; j<=i; j++){
-                if (i%j==0){
-                    countuoc ++;
-                }
-            } if (countuoc==2){
-                document.write(i);
-                document.write("<br>")
-                count++;  
-            }   
-            countuoc = 0;
-        }
+        // let number = 20;
+        // let count = 0;
+        // // count là đếm số có trong dãy số 
+        // let countuoc = 0;
+        // // vì số nguyên tố nên có 2 ước để xuống xét điều kiện 
+        // for ( let i = 2; count< number; i++){
+        //     for (let j=1; j<=i; j++){
+        //         if (i%j==0){
+        //             countuoc++;
+        //         }
+        //     }
+            
+        // if (countuoc==2){
+        //         document.write(i);
+        //         document.write("<br>")
+        //         count++;  
+        //     }   
+        //     countuoc = 0; 
+        
+        // }
 
+        // let a = 1;
+        // let b =1;
+        // let c;
+        // let total=0;
+        // for (i=1; i<=20; i++){
+        //     a;
+        //     total += a;
+        //     c = a + b;
+        //     a=b;
+        //     b=c;
+        // } document.write(total)
+
+        
+
+
+        
         
     </script>
 
@@ -37,29 +56,29 @@
 
 
 
-<!-- <script>
-    function checkNT(number) {
-        let count = 0; // đếm số ước của số đang xét; 
-        let countSNT = 0; // đếm xem đã đủ số lượng số nguyên tố cần in ra chưa;
-        for (let i = 2; i < 1000; i++) { // 2,3,4,5,6,7,8,....,1000
-            if (countSNT < number) { // Nếu số lượng SNT in ra < so với số lượng yêu cầu
-                for (let j = 1; j <= i; j++) {
-                    if (i % j == 0) {
-                        count += 1;
-                    }
-                }
-                if (count == 2) {
-                    document.write(i + "<br>"); //4
-                    countSNT += 1; //1
-                }
-                count = 0;
-            } else {
-                break;
-            }
-        }
-    }
-    let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: ")); //10
-    checkNT(number);
-    </script> -->
+// <!-- <script>
+//     function checkNT(number) {
+//         let count = 0; // đếm số ước của số đang xét; 
+//         let countSNT = 0; // đếm xem đã đủ số lượng số nguyên tố cần in ra chưa;
+//         for (let i = 2; i < 1000; i++) { // 2,3,4,5,6,7,8,....,1000
+//             if (countSNT < number) { // Nếu số lượng SNT in ra < so với số lượng yêu cầu
+//                 for (let j = 1; j <= i; j++) {
+//                     if (i % j == 0) {
+//                         count += 1;
+//                     }
+//                 }
+//                 if (count == 2) {
+//                     document.write(i + "<br>"); //4
+//                     countSNT += 1; //1
+//                 }
+//                 count = 0;
+//             } else {
+//                 break;
+//             }
+//         }
+//     }
+//     let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: ")); //10
+//     checkNT(number);
+//     </script> -->
 </body>
 </html>

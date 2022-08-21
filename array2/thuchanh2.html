@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sample Screen</h1>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="textValue">
+                <button onclick="showElement()" id="addElement">Add</button>
+                <button onclick="showDisplay()" id="displayElement" >Display</button>
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        let x = 0;
+        let array = new Array();
+
+        function showElement() {
+            array[x] = document.getElementById('textValue').value;
+            alert(`Element: ${array[x]} add the index ${x}`);
+            x++;
+            document.getElementById('textValue').value = "";
+        }
+        function showDisplay() {
+            let e = "<hr/>";
+            for (i = 0; i< array.length; i++) {
+                e += `element ${i} = ${array[i]} <br>`;
+            }
+            document.getElementById('result').innerHTML = e;    
+        }
+    </script>
+</body>
+</html>
