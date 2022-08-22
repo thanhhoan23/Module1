@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Caro Simple</title>
+</head>
+<h1>Caro Simple</h1>
+<p id="carogame"></p>
+
+
+<script>
+    let x = document.getElementById('carogame');
+    let value = [];
+    let data = "";
+    for (let row = 0; row < 5; row++) {
+        value[row] = new Array(0, 0, 0, 0, 0);
+    }
+    console.log(value);
+
+    let str = '';
+    for (let r = 0; r < 5; r++) {
+        let rRow = '';
+        for (let c = 0; c < 5; c++) {
+            rRow += value[r][c];
+        }
+        str += rRow + '</br>';
+    }
+    x.innerHTML= (str + "<button onclick='showValue()'>Change Value</button> <br>");
+    
+
+
+    // thay doi vi tri 
+    function showValue() {
+        let positionRow = Number(prompt('enter the number row'));
+        let positionColumn = Number(prompt('enter the number column'));
+        value[positionRow][positionColumn] = "x";
+
+        // Ve lai cho tui
+
+        str = " ";
+        for (let r = 0; r < 5; r++) {
+            let rRow = '';
+            for (let c = 0; c < 5; c++) {
+                rRow += value[r][c];
+            }
+            str += rRow + '</br>';
+        }
+        x.innerHTML=(str + "<button onclick='showValue()'>Change Value</button>");
+        str=" ";
+
+    }
+
+</script>
+</body>
+
+</html>
