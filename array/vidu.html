@@ -37,17 +37,46 @@
         //     listname [i] = Math.floor(Math.random() * (40-10 +1)+10);
         // }document.write(listname);
 
-        a = 1;
-        b = 1;
-        c = 0;
-        for (i=1; i < 20;i++){
-            document.write(c);
-            c = a+b;
-            a=b;
-            b=c;
-        } 
+        // let totalStudent = Number (prompt('enter the total'));
+        // let arrayTotal = new Array ();
+        // let x;
+        // for (i = 0; i < arrayTotal.length; i++) {
+        //     arrayTotal[i] = "thanh hoan";
+        // }
+        // document.write(i);
 
+        let size = 10;
+        let min = 20;
+        let max = 30;
+        let number = new Array (size);
 
+        for (let i = 0; i<size; i++) {
+            number[i] = Math.floor(Math.random() * (max-min +1) +10);
+        }
+
+        document.write(number);
+        let findNumber = Number (prompt('enter the number'));
+        let found = false;
+        for (let i = 0; i< size; i++ ) {
+            if (findNumber == number[i]) {
+                found = true;
+                break;
+            }
+        }
+        if (found ) {
+            document.write(`<br> ${findNumber} co xuat hien trong mang `);
+        } else {
+            document.write(`<br> ${findNumber} khong xuat hien trong mang`)
+        }
+        //  document.write(`<br> ${findnumber} ${found ? 'co' : 'khong'}  xuat hien trong mang`)
+
+        // let numbers = [6,5] ;
+        // for (const number of numbers) {
+        //     console.log(6);
+        // }
+      //  let number = new Array (5)
+
+      
 
         
 
