@@ -8,19 +8,22 @@
 </head>
 <body>
     <script>
+        // cach 1: khong dung ham :
         let x = [1, 2, 5, -1, 10, 13];
-        // let first = 0;
-        // let last = x.length-1;
-        // while (first < last) {
-        //     let b = x[first];
-        //     x[first] = x[last];
-        //     x[last] = b;
-        //     first++;
-        //     last--;
-        // } document.write(x);
+        let first = 0;
+        let last = x.length-1;
+        while (first < last) {
+            let b = x[first];
+            x[first] = x[last];
+            x[last] = b;
+            first++;
+            last--;
+        } document.write(x);
 
-        document.write(x.reverse());
-        
+        // cach 2 dung ham reverse:
+        // let x = [1, 2, 5, -1, 10, 13];
+        // document.write(x.reverse());
+
     </script>
 </body>
 </html>

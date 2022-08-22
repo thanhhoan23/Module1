@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Find the mumber</title>
 </head>
 <body>
-    
+    <script>
+        let number = Number (prompt('enter the number'));
+        let arrayNumber = [2, 3, 5, 7, 9, 15, 20, 50];
+        for (i = 0; i < arrayNumber.length; i++) {
+            if (number == arrayNumber[i]) {
+                alert (`Value ${arrayNumber[i]} find at ${i}`);
+            }
+        }
+    </script>
 </body>
 </html>
