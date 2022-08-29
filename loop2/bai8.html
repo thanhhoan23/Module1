@@ -12,28 +12,34 @@
     <button onclick="play()" style="width: 100px; height: 100px"> Play </button>
     <script>
         function play() {
+            do {
+                number = prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?")
+            } while( isNaN(number));
 
-            let number = +prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?")
+            
             let number_ran = Math.floor(Math.random() * number);
             // let number_check = +prompt ("Nhập số bạn đoán");
             
             let count = 0;
-            // do {
-            //     number = prompt('the number you can guess');
-            // } while (isNaN(size));
+          
 
-            for (i = 0; count < 3; i++) {
-                let number_check = +prompt("Nhập số bạn đoán");
+            for (i = 0; i < 3; i++) {
+                do {
+                number_check = prompt('the number you can guess');
+            } while (isNaN(number_check));
                 if (number_check == number_ran) {
                     alert('Tèn tèn, khó vậy cũng đoán được');
                     document.write('Giỏi ghê ha')
                     break;
                 } else if (number_check < number_ran) {
-                    alert('Số này bé quá bé ơi');
+                    alert('Số này bé quá bé ơi');count++
                 } else {
                     alert('Số này lớn quá bé ơi');
+                    count++
                 }
-                count++;
+                
+            }
+            if (count==3) {
                 document.write('Hết lượt mất tiêu rồi 🫣');
             }
 

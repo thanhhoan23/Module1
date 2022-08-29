@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <h4>Nhap tu</h4>
+            </td>
+            <td>
+                <input type="text" name="" id="textValue">
+            </td>
+            <td>
+                <button onclick="transfer()">Dich</button>
+            </td>
+        </tr>
+        <tr>
+            <div id="result"></div>
+        </tr>
+    </table>
+    
+    <script>
+        function transfer() {
+            let english = [
+                "banana",
+                "apple",
+                "teacher",
+                "flight attendant"
+            ];
+            let vietnamese = [
+                "qua chuoi",
+                "qua tao",
+                "giao vien",
+                "tiep vien hang khong"
+            ];
+            let textValue = document.getElementById('textValue').value;
+            let position = -1; 
+            let result = "";
+             for (wordE = 0; wordE < english.length; wordE++) {
+                if (textValue.toLowerCase() == english[wordE].toLowerCase()) {
+                    position = wordE;
+                }
+             } 
+             if ( position != -1) {
+                result = vietnamese[position];
+                
+             } else {
+                result = "khong tim thay";
+             }
+             document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getArray(size, min, max) {
+            let array = new Array(size);
+            for (i = 0; i < size; i++) {
+                array[i] = Math.floor(Math.random() * (max - min + 1) + 10);
+            }
+            return array;
+        }
+        let result = getArray(10, 10, 30);
+        document.write(result);
+        document.write("<br>");
+// 2: tính bao nhiêu số chia hết cho 2
+        function getEven(even) {
+            let count = 0;
+            for (j = 0; j < even.length; j++) {
+                if (j % 2 == 0) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        let outcome = getEven(result);
+        document.write(`có ${outcome} số chẵn`);
+        document.write("<br>")
+// 3. tìm có bao nhiêu số số chính phương
+
+        function getSquare (square) {
+            let countk = 0;
+            for (k = 0; k < square.length; k++ ) {
+                let number = Number.isInteger(Math.sqrt(square[k]))
+                if (number == true) {
+                    countk ++;
+                }
+            }
+            return countk;
+        }
+        let outCome = getSquare (result);
+        document.write(`Có ${outCome} số chính phương`);
+        document.write("<br>");
+        
+
+// 4. tìm xem có nao nhiêu số nguyên tố 
+
+        function getPrime(prime) {
+            let countdem = 0;
+            let countuoc = 0;
+            for (m = 0; m < prime.length; m++) {
+                for (n = 2; n < prime[m]; n++) {
+                    if (prime[m] % n== 0) {
+                        countuoc++;
+                    }
+                } if (countuoc == 0) {
+                    // document.write(m);
+                    countdem++;
+                }
+                countuoc = 0;
+            }
+            return countdem;
+        }
+        let container = getPrime(result);
+        document.write(`co ${container} so nguyen to`);
+
+    </script>
+</body>
+
+</html>

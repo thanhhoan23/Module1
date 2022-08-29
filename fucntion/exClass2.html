@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function getPrime (row,column, min, max ) {
+        let arrayR = new Array (row);
+        for ( i = 0 ; i < row; i++) {
+            arrayR[i] = [];
+            for (j = 0; j < column; j++) {
+                arrayR[i][j] = Math.floor(Math.random() * (max - min +1)+min) ;
+            } 
+        } 
+        return arrayR;
+      }
+      let row = Number(prompt("enter the row"));
+      let column = Number (prompt("enter the column"));
+      let outcome = getPrime(row, column, 10,90 );
+      document.write(outcome.join("<br>"));
+      document.write("<br>");
+      // bài 1: tính tổng các số chẵn trong ma trận
+
+      function getEven (even) {
+        let total = 0;
+        for (e = 0; e < row; e++) {
+            for (f = 0; f < column; f++ ) {
+              if (even[e][f] % 2 == 0) {
+                total += even[e][f];
+              }
+            }
+        }
+        return total;
+      }
+      let result = getEven(outcome);
+      document.write(`Tổng cộng số chẵn là: ${result}`);
+      document.write("<br>")
+      
+      // bài 2: tính tổng các giá trị trên đường chéo chính
+
+      function getMain (main) {
+        let totalMain = 0;
+        for (k = 0; k < row; k++) {
+          for (l = 0; l < column; l++) {
+            if (k == l) {
+              totalMain += main[k][l];
+            }
+          }
+        }
+        return totalMain;
+      } 
+      let container = getMain(outcome);
+      document.write(`Tổng cộng giá trị trên đường chéo chính là: ${container}`);
+      document.write("<br>");
+
+      // bài3: tính tổng các giá trị trên đường chéo phụ
+      // function getExtra (extra) {
+      //   let totalExtra = 0;
+      //   for ( m = 0 ; m < row ; m--) {
+      //     for ( n = 0 ; n <column; n--) {
+      //       if ()
+      //     }
+      //   }
+      //   return totalExtra;
+      // }
+      // let warehouse = getExtra(outcome);
+      // document.write(`Tổng cộng: ${warehouse}`);
+
+
+
+    
+    </script>
+</body>
+</html>
